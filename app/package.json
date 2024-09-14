@@ -1,0 +1,12 @@
+{
+  "name": "checkpointlibrary",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.0.12"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

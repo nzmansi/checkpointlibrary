@@ -1,17 +1,13 @@
-# Usar uma imagem existente do node
-FROM node:alpine
+FROM node:18
 
-# Configurar o caminho dentro do container
 WORKDIR /usr/src/app
 
-# Copiar os arquivos
-COPY package*.json ./
+COPY CheckPointLibrary/package*.json ./
 
-# Executar npm install
 RUN npm install
 
-# Copiar o resto da aplicação
-COPY . .
+COPY CheckPointLibrary/app .
 
-# Expor a porta
 EXPOSE 3000
+
+CMD ["node", "app.js"]
